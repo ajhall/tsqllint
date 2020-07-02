@@ -6,10 +6,15 @@
     <Version>1.11.1</Version>
     <OutputType>Exe</OutputType>
   </PropertyGroup>
-  
+
   <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' AND '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
     <DebugSymbols>True</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Tool'">
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>tsqllint</ToolCommandName>
   </PropertyGroup>
 
   <ItemGroup>
